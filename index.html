@@ -7,11 +7,22 @@
 	<script src="jquery.mobilemenu.js"></script>
 	<script>
 		$(document).ready(function(){
-				$('#test, #test2, #test3').mobileMenu();
+				$('#test, #test2, #test3').mobileMenu({ 
+					prependTo: '#menus1'
+				});
+		});
+	
+		$(document).ready(function(){
+				$('#test, #test2').mobileMenu({ 
+					combine: false,
+					prependTo: '#menus2'
+				});
 		});
 	</script>
 </head>
 <body>
+<div id="menus1"></div>
+<div id="menus2"></div>
 	<ol id="test">
 		<li><a href="test">test1</a></li>
 		<li><a href="test2">test2</a></li>
